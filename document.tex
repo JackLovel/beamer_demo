@@ -1,15 +1,96 @@
 \documentclass{beamer}
 \mode<presentation>
 {
+% 设定主题
 \usetheme{Madrid}
 }
 \usepackage{graphicx}
 \usepackage{xeCJK}
-\title{使用 rails 来制作一个blog} % optional 
-%{About the Beamer class in presenation making}
+\title{使用 rails 来制作一个blog}
 \subtitle{一个后端框架}
 \author{JackLovel}
 \date{2020-2-21}
+
+\AtBeginSection[]
+{
+	\begin{frame}
+		\frametitle{Table of contents}
+		\tableofcontents[currentsection]
+	\end{frame}
+}
+
 \begin{document}
+	
 \frame{\titlepage}
+\begin{frame}
+\frametitle{Table of contents}
+\tableofcontents
+\end{frame}
+
+% 目录
+\section{介绍}
+
+\begin{frame}
+\frametitle{simle frame title without}
+
+This is a text in second frame. For the sake of showing an example.
+
+\begin{itemize}
+\item Text visible on slide 1 
+\item Text visible on slide 2
+\item Text visible on slide 3 
+\end{itemize}
+\end{frame}
+
+\section{相关工作}
+\begin{frame}
+	\frametitle{一个带动画的章节}
+	
+	This is a text in second frame. For the sake of showing an example.
+	
+	\begin{itemize}
+		\item<1-> Text visible on slide 1 
+		\item<2-> Text visible on slide 2
+		\item<3-> Text visible on slide 3 
+	    \item<4-> Text visible on slide 4
+	\end{itemize}
+\end{frame}
+
+
+% insert a sample frame with animation2 
+\begin{frame}
+\frametitle{一个带动画的章节2}
+In this slide\pause
+
+the text will be partially visible\pause
+
+And finally everything will be there 
+\end{frame}
+
+\section{实现高亮}
+\begin{frame}
+\frametitle{实现文本高亮的效果}
+\colorbox{orange}{高亮}
+
+In this slide, some \textbf{重要} text will be \alert{高亮} beacase it's important. 
+Please, don't textcolor{green}{abuse} it.
+
+\begin{block}{Remark}
+	sample text.
+\end{block}
+
+\begin{alertblock}{Important theorem}
+	sample text in red box.
+\end{alertblock}
+
+\begin{examples}
+	例子在绿色盒子里。``example'' “例子”
+\end{examples}
+
+\end{frame}
+
+
+
+\section{实验}
+\section{结论}
 \end{document}
